@@ -59,16 +59,7 @@ app.get("/blogs/:id",function(req,res){
      }
    })
 });
-//app.get("/blogs/delete/:id",function(req,res){
-  //  Blog.deleteOne(req.params.title,function(err,deleted){
-   // if(err){
-    // console.log(err);
-    //}else{
-     //  console.log(deleted);
-      // res.redirect("/blogs");
-  // }
- //});
-//})
+
 app.delete("/blogs/:id",function(req,res){
    Blog.findByIdAndRemove(req.params.id,function(err,deleted){
    if(err){
@@ -98,17 +89,6 @@ app.put("/blogs/:id",function(req,res){
     }
     })
 });
-// One more method of updating using post request
-//app.post("/blogsupdate/:id",function(req,res){
-  //   console.log(req.body);
-    // Blog.updateOne(req.body.blog,function(err,updated){
-     // if(err){
-      //  console.log(err);
-      //}else{
-       //  res.redirect("/blogs")
-     // }
-     //});
-//});
 
 app.listen(3000,function(req,res){
    console.log("server is starting");
