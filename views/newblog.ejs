@@ -1,0 +1,23 @@
+<%- include("partials/header")%>
+<div style="margin-top: 50px;" class="ui main text container segment">
+    <h3>Create New Blog</h3>
+    <hr></hr>
+<form class="ui form" action="/blogs" method="POST">
+    <div class="field">
+      <label>Title</label>
+      <input type="text" name="blog[title]" placeholder="First Name" required>
+    </div>
+    <div class="field">
+      <label>Image</label>
+      <input type="text" name="blog[image]" placeholder="Image" required>
+    </div>
+    <div class="field">
+      <label>Blog description</label>
+      <textarea placeholder="blog content" name="blog[body]" required></textarea>
+    </div>
+    <button class="ui primary button" type="submit">Submit</button>
+  </form>
+</div>
+
+
+<%- include("partials/footer")%>
